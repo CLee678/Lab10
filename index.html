@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Display a map</title>
+<title>Philly Buildings</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css" rel="stylesheet" />
@@ -66,8 +66,8 @@
 <body>
   <div id="map"></div>
   <div class="map-overlay" id="features">
-    <h2>Building footprint map</h2>
-    <div id="pd"><p>The building id is</p></div>
+    <h2>Philly Buildings</h2>
+    <div id="pd"><p>The building ID is</p></div>
   </div>
   <div class="map-overlay" id="legend"></div>
 <script>
@@ -114,13 +114,13 @@ map.on('load', function() {
       
       if (states.length > 0) {
         document.getElementById('pd').innerHTML =
-          '<h3><strong> building id:' +
+          '<h3><strong> Building ID:' +
           // states[0].properties.fid +
           '</strong></h3><p><strong><em>' +
           states[0].properties.landuse;
       } else {
         document.getElementById('pd').innerHTML =
-          '<p>The building id is: </p>';
+          '<p>The building ID is: </p>';
       }
     });
 });
